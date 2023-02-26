@@ -6,11 +6,10 @@
 
 body {
   background-image: url(../images/mainBg.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 98vh;
+  height: 93vh;
   color: #fff;
   font-family: "Nunito Sans";
 }
@@ -104,10 +103,14 @@ body {
 }
 
 .co-right-col {
+  position: relative;
   background-color: #1b022a;
   padding: 2rem 1.75rem;
   color: #fff;
   box-shadow: 0px 2px 12px #3f1558;
+}
+.co-right-col .co-progress-bar {
+  background-image: linear-gradient(90deg, #0de2cd, #67fa1e, transparent);
 }
 .co-right-col .co-subtitle {
   font-size: 12px;
@@ -199,11 +202,11 @@ body {
 }
 
 .footer {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   position: fixed;
-  z-index: 1;
-  bottom: 1%;
   left: 50%;
+  bottom: 0;
+  z-index: 1;
   padding: 0;
   color: #fff;
 }
@@ -211,13 +214,16 @@ body {
   text-decoration: none;
 }
 .footer-icon {
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 100%;
   color: #180423;
   background-color: #fff;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 758px) {
+  body {
+    background-attachment: fixed;
+  }
   .co-row {
     display: block;
     margin: auto;
