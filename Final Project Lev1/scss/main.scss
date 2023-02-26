@@ -6,7 +6,7 @@ body{
     background-position: center; 
     background-repeat: no-repeat;
     background-size:cover;
-    // background-attachment: fixed;
+    background-attachment: fixed;
     // width: 100vw;
     height: 93vh;
     color: $text-color;
@@ -285,7 +285,7 @@ body{
 
 .footer{
     font-size: 1.15rem;
-    position: fixed;
+    position: relative;
     left: 50%;
     bottom: 0;
     z-index: 1;
@@ -309,14 +309,25 @@ body{
     
 @media (max-width: 758px){
    body{
-    background-attachment: fixed;
+    background-attachment:local;
+    background-size: auto;
+
    }
 
+   .co-main{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+   
+   }
 
-    .co-row{
-        display: block;
-        margin: auto;
-    }
+    // .co-main{
+    //     display: block;
+    //     margin: auto;
+    // }
+
+
+ 
 
     .co-icons{
         display: flex;
