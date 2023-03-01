@@ -37,3 +37,43 @@ let x = setInterval(function(){
        }
 
 }, 1000);
+
+
+// get the modal
+const modalSignup = document.getElementById("co-modal-signup");
+
+// get the button that opens the modal
+const buttonPopup = document.getElementById("co-buttonSignup");
+
+// get the span element that closes the modal
+const iconClose = document.querySelector('.icon-close');
+
+
+// when the user clicks on the button,open the modal
+buttonPopup.onclick = function() {
+  modalSignup.style.transform ="none";
+  modalSignup.style.display = "block";
+}
+
+// when the user clicks on span ,close the modal
+iconClose.onclick = function() {
+  modalSignup.style.display = "none";
+
+}
+
+// when the user clicks anywhere outside of the modal, close it
+window.onclick = function (event){
+  if (event.target == modalSignup) {
+    modalSignup.style.display = "none";
+  }
+}
+
+
+
+// iconClose.addEventListener('click', () =>{
+//   wrapper.classList.remove('active-popup');
+// } );
+
+// iconClose.addEventListener('click', () =>{
+//   wrapper.classList.add('active-popup');
+// } );

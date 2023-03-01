@@ -11,12 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@200&family=Space+Mono&family=Unbounded:wght@800&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@200&family=Space+Mono&family=Titillium+Web&family=Unbounded:wght@800&display=swap" rel="stylesheet">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Oswald&family=Poppins:wght@200;400&family=Space+Mono&family=Titillium+Web&family=Unbounded:wght@800&display=swap" rel="stylesheet">
+    
     <title>Final Project | Cryptoland</title>
 </head>
 
@@ -84,13 +80,54 @@
                             <a class="nav-link text-white btn  mx-2 px-4 py-2 btn-sm co-btn-signin" type="button" data-bs-toggle="modal" data-bs-target="#user-signin-modal"  href="#">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white btn btn-outline-primary mx-2 co-btn-signup" href="#">Sign up</a>
+                                                                                                    <!--triggers the modal  -->
+                            <a class="nav-link text-white btn btn-outline-primary mx-2 co-btn-signup" id="co-buttonSignup" href="#">Sign up</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- user signup modal with css -->
+    <div class="wrapper" id="co-modal-signup" >
+        <div class="co-modal-content">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark "></i>
+            </span>
+            <div class="form-box" >
+                <h2>Register here</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" required>
+                        <label>First name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" required>
+                        <label>Last name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" minlength="8" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="accept-conditions">
+                        <label>
+                            <input type="checkbox"> I accept the terms and conditions
+                        </label>
+                    </div>
+                    <button type="submit" class="button">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- user-signin-modal -->
     <div class="modal fade text-dark" id="user-signin-modal" tabindex="-1"                  aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,13 +163,13 @@
     </div>
 
 
-    <main class="co-main">
+    <main class="co-main"> 
         
         <div class="row align-items-center">
-            <section class="col-10 col-md-8 co-left-col" >
+            <section class="col-12 col-md-8 co-left-col co-col-12" >
                 <h1 class="fw-bold">Cryptoland is ICO</h1>
-                <h4 >for the cryptocurrency business</h4>
-                <p class="my-4 ">Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountainthought.Jumbo plus shine sale</p>
+                <p class="co-subtitle">for the cryptocurrency business</p>
+                <p class="my-4 co-description ">Spend real fights effective anything extra by leading. Mouthwatering leading how real formula also locked-in have can mountainthought.Jumbo plus shine sale</p>
                 <a class="btn btn-sm my-md-3   co-btn-sm" href="#"><i class="fa-regular fa-newspaper"></i> Smart Contract</a>
                 <a class="btn btn-sm my-md-3 mx-md-5 mx-3 co-btn-sm" href="#"><i class="fa-regular fa-circle-play"></i> Hot to buy Tokens</a>
                 <div class="my-4">
@@ -141,77 +178,44 @@
                 </div>
             </section>
 
-
-            <!-- <section class="col-4 text-center text-black">
-                <div class="card co-card opacity-75">
-                    <div class="card-body text-center py-4">
-                        <h6 class="card-title">Cryptoland ICO ends:</h6>
-                        <p class="card-subtitle">Total raised: 1864 866$</p>
-                        <p id="counter">
-                            <div class="co-counter">
-                                <div>
-                                    <div class="co-counter-days fw-bold"></div>
-                                    <p><small>Days</small></p>
-                                </div>
-                                <div>
-                                    <div class="co-counter-hours fw-bold"></div>
-                                    <p><small>Hours</small></p>
-                                </div>
-                                <div>
-                                    <div class="co-counter-minutes fw-bold"></div>
-                                    <p><small>Minutes</small></p>
-                                </div>
-                                <div>
-                                    <div class="co-counter-seconds fw-bold"></div>
-                                    <p><small>Seconds</small></p>
-                                </div>
-                            </div>
-                        </p>
-                        <p>loading bar</p>
-                        <p>fixed token edition 8.000.000 BITS</p>
-                        <button>Buy Tokens 47% Off</button>
-                        <div>visa, master, B, Paypal icons</div>
-                    </div>
-                </div>
-            </section> -->
-
-            <section class="col-10 col-md-4 text-center" >
+           
+            <section class="col-12 col-md-4 text-center co-col-12" >
+                
                 <div class="container-sm co-right-col">
-                    <div class="co-gradient">
-                        <h6 class="fw-bold pb-3">Cryptoland ICO ends:</h6>
-                        <p class="co-subtitle">Total raised: 1864 866$</p>
-                        
-                        <div class="co-counter">
-                            <div>
-                                <div class="co-counter-days fw-bold fs-3"></div>
-                                <p class="co-subtitle"><small>Days</small></p>
-                            </div>
-                            <div>
-                                <div class="co-counter-hours fw-bold fs-3"></div>
-                                <p class="co-subtitle"><small>Hours</small></p>
-                            </div>
-                            <div>
-                                <div class="co-counter-minutes fw-bold fs-3"></div>
-                                <p class="co-subtitle"><small>Minutes</small></p>
-                            </div>
-                            <div>
-                                <div class="co-counter-seconds fw-bold fs-3"></div>
-                                <p class="co-subtitle"><small>Seconds</small></p>
-                            </div>
-
+                    <h6 class="fw-bold pb-3">Cryptoland ICO ends:</h6>
+                    <p class="co-subtitle">Total raised: 1864 866$</p>
+                    
+                    <div class="co-counter">
+                        <div>
+                            <div class="co-counter-days fw-bold fs-3"></div>
+                            <p class="co-subtitle"><small>Days</small></p>
                         </div>
-                    </div>
+                        <div>
+                            <div class="co-counter-hours fw-bold fs-3"></div>
+                            <p class="co-subtitle"><small>Hours</small></p>
+                        </div>
+                        <div>
+                            <div class="co-counter-minutes fw-bold fs-3"></div>
+                            <p class="co-subtitle"><small>Minutes</small></p>
+                        </div>
+                        <div>
+                            <div class="co-counter-seconds fw-bold fs-3"></div>
+                            <p class="co-subtitle"><small>Seconds</small></p>
+                        </div>
 
+                    </div>
+                    
+                            <!-- progress bar css -->
                     <div>
                         <div class="co-limits">
-                            <span>700K</span>
-                            <span>1.5M</span>
-                            <span>3M</span>
+                            <span class="co-sub-subtitle">700K</span>
+                            <span class="co-sub-subtitle">1.5M</span>
+                            <span class="co-sub-subtitle">3M</span>
                         </div>
                         <div class="co-loading-bar text-black  pb-1">
                             <div class="co-colored-bar">
-                             <div class="co-first-limit"></div>
-                             <div class="co-second-limit"></div>
+                            <div class="co-first-limit"></div>
+                            <div class="co-second-limit"></div>
                             </div>
                             <div class="text-muted co-subtitle ms-4 ms-md-2">4M Max</div>
                             
@@ -219,7 +223,7 @@
                         <div class="text-start text-light co-sub-subtitle">SOFT CAP</div>
                     </div>
 
-                        <!-- bootstrapt progress bar -->
+                            <!-- bootstrapt progress bar -->
                     <div class="progress co-progress-bar" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar co-progress-bar" style="width: 70%"></div>
                         <!-- <div class="progress-bar border-end" style="width: 25%"></div>
@@ -228,22 +232,22 @@
                         <div class="text-muted ms-4 ms-md-2">4M Max</div>
                     </div>
                     
-                    
+                
 
 
 
-                    <p class="co-subtitle">Fixed token edition 8.000.000 BITS</p>
+                    <p class="co-subtitle my-4">Fixed token edition 8.000.000 BITS</p>
                     <div class="d-grid d-md-block">
                         <button class="btn btn-danger  co-btn-tokens">Buy Tokens 47% Off</button>
                     </div>
                     <div class="mt-4 co-icons">
-                        <img src="icons/visa-4-logo-svgrepo-com.svg" width="30" height="30" alt="visa card icon">
-                        <img src="icons/mastercard-old-svgrepo-com.svg" width="40" height="40" alt="mastercard icon">
-                        <img src="icons/bitcoin-svgrepo-com.svg" width="30" height="30" alt="bitcoin icon"> 
-                        <img src="icons/paypal-logo-svgrepo-com.svg" width="40" height="40" alt="paypall icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/349/349221.png" class="my-1"  height="35" alt="visa card icon">
+                        <img src="icons/mastercard-old-svgrepo-com.svg"  height="45"  alt="mastercard icon">
+                        <img src="icons/bitcoin-svgrepo-com.svg" class="my-2" width="30" height="30" alt="bitcoin icon"> 
+                        <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" class="my-2" height="30" alt="paypall icon" >
                     </div>
                 </div>
-
+                
             </section>
         </div>
             

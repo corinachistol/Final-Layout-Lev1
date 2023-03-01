@@ -1,4 +1,6 @@
 @import 'config';
+@import 'responsive';
+@import 'navbar';
 
 body{
   
@@ -6,68 +8,14 @@ body{
     background-position: center; 
     background-repeat: no-repeat;
     background-size:cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     // width: 100vw;
     height: 93vh;
     color: $text-color;
-    font-family: 'Nunito Sans';
+    font-family: 'Monteserrat', sans-serif;
     
 }
-
-.co-font-nav{
-    font-size: .75rem;
-}
-
-.co-navbar-brand{
-    font-family: 'Nunito Sans';
-}
-
-.co-navbar-toggler-icon{
-    border: 1px solid white;
-    fill: white ;
-    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-
-    
-}
-
-.co-navbar-toggler:focus{
-    box-shadow: none;
-    border:none;
-}
-
-// .dropdown-menu.show {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     width: 10%;
-
-// }
-
-
-.co-btn-signin{
-    background-color: #4ad34a;
-    border: none;
-
-    &:active{
-        background-color: $primary-color;
-    }
-
-    &:hover{
-        background-color: $primary-color;
-    }
-}
-
-    
-
-
-.co-btn-signup{
-    border: none;
-
-    &:hover{
-        background-color: $primary-color;
-    }
-}
-
+  
 .co-main{
     max-width: 900px;
     margin: 0 auto;
@@ -78,22 +26,19 @@ body{
 
 .co-left-col{
     
-    
-    
-    & h2{
-        margin-bottom: 0;
+    & h1{
+        font-weight: 100;
+    }
+   
+    & .co-subtitle{
+        font-size: 1.75rem;
+        font-weight:100;
     }
 
-     
-
-    // & .co-subtitle{
-
-    //     font-size: 22px;
-    //     font-weight:lighter;
-    //     letter-spacing:1px;
+    & .co-description{
+        font-size: .8rem;
+    }
     
-    //     }
-
     & .co-btn-sm{
         color: white;
         border: none;
@@ -118,7 +63,6 @@ body{
         }
     }
 
-  
 
     & .co-btn-left{
         font-size: .75rem;
@@ -132,7 +76,6 @@ body{
             border: $primary-color;
 
         }
-        
     }
 
     & .co-btn-right{
@@ -150,37 +93,80 @@ body{
 
     }
     
-
 }
 
+
 .co-right-col{
-    position: relative;
-    background-color: #1b022a;
-    // opacity: .50;
-    
-    
+    background-color: rgba(18, 04,  23, 0.45);
     padding: 2rem 1.75rem;
     color: $text-color;
     box-shadow: 0px 2px 12px $primary-color;
 
-    
+       
     & .co-progress-bar{
-        // background-color: red;
         background-image: linear-gradient(90deg, #0de2cd , #67fa1e , transparent );
     }
     
     
     & .co-subtitle{
-        font-size: 12px;
-        // padding: 5px;
-        
+        font-size: .75rem;        
     }
 
     & .co-sub-subtitle{
-        font-size: 10px;
+        font-size: .55rem;
     }
     
+    .co-counter{
+        display: flex;
+        justify-content:center;
+        gap: .25rem;
     
+        &-days{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: .25rem;
+            color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+    
+        &-hours{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: .25rem;
+            color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-minutes{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: .25rem;
+            color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-seconds{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: .25rem;
+            color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        
+    }
+
     & .co-loading-bar{
         width: 100%;
         height: 15px;
@@ -213,79 +199,35 @@ body{
         display: flex;
         justify-content: space-around;
         font-size: 10px;
+        
 
     }
 
     & .co-btn-tokens{
+        width: 100%;
         font-size: .85rem;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 9px 0px #ff0062cf;
+        background-color: #ff0062cf;
+        border: none;
+        border-radius: 2%;
+        
     }
 
     & .co-icons {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
     }
 
 }
 
-
-
-.co-counter{
-    display: flex;
-    justify-content:center;
-    gap: .25rem;
-
-    &-days{
-        width: 3rem;
-        height: 3rem;
-        background-color: white;
-        border-radius: .25rem;
-        color: black; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    &-hours{
-        width: 3rem;
-        height: 3rem;
-        background-color: white;
-        border-radius: .25rem;
-        color: black; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &-minutes{
-        width: 3rem;
-        height: 3rem;
-        background-color: white;
-        border-radius: .25rem;
-        color: black; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &-seconds{
-        width: 3rem;
-        height: 3rem;
-        background-color: white;
-        border-radius: .25rem;
-        color: black; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-}
 
 
 
 .footer{
     font-size: 1.15rem;
-    position: relative;
+    position: fixed;
     left: 50%;
     bottom: 0;
     z-index: 1;
@@ -306,36 +248,16 @@ body{
     }
 }
 
+
+
+
     
-@media (max-width: 758px){
-   body{
-    background-attachment:local;
-    background-size: auto;
-
-   }
-
-   .co-main{
-    display: grid;
-    justify-content: center;
-    grid-template-rows: auto;
-   
-   }
-
-    // .co-main{
-    //     display: block;
-    //     margin: auto;
-    // }
 
 
- 
-
-    .co-icons{
-        display: flex;
-        justify-content: center;
-    }
 
 
-}
+
+
 
 
 
